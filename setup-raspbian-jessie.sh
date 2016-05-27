@@ -4,7 +4,7 @@
 update_package(){
 	# update package
 	sudo apt-get update
-	sudo apt-get upgrade
+	sudo apt-get -y upgrade
 
 	# update firmware
 	sudo rpi-update
@@ -61,4 +61,8 @@ MM=`expr ${SS} / 60`
 SS=`expr ${SS} % 60`
 
 echo "Total Time: ${HH}:${MM}:${SS} (h:m:s)"
+
+echo "Input password for vnc"
+sudo /etc/init.d/vncboot start
+
 echo "Please reboot"
