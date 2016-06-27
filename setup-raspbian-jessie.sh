@@ -39,8 +39,8 @@ setup_dotfiles(){
 	sudo cp ./dotfiles/lxpolkit.desktop /etc/xdg/autostart/lxpolkit.desktop
 
 	sudo cp ./dotfiles/vncboot /etc/init.d/vncboot
-	update-rc.d -f lightdm remove
-	update-rc.d vncboot defaults
+	sudo update-rc.d -f lightdm remove
+	sudo update-rc.d vncboot defaults
 }
 
 START_TIME=`date +%s`
@@ -61,4 +61,4 @@ MM=`expr ${SS} / 60`
 SS=`expr ${SS} % 60`
 
 echo "Total Time: ${HH}:${MM}:${SS} (h:m:s)"
-ehho "Please reboot"
+echo "Please reboot"
