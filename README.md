@@ -12,10 +12,25 @@ Plug Ether cable or setup wifi
 Run raspi-config and set keyboard
 
 # Run script
-Open terminal and execute following commands:
+Open terminal
+
+
+Execute following commands to install Git (If Git is not installed):
+```sh
+$ sudo apt-get update
+$ sudo apt-get install git
+```
+
+Execute following commands:
 ```sh
 $ cd
 $ git clone https://github.com/karaage0703/raspberry-pi-setup
 $ cd raspberry-pi-setup
 $ ./setup-raspbian-jessie.sh
 ```
+
+# Vncboot setting
+```sh
+$ sudo /etc/init.d/vncboot start
+```
+Setting password
