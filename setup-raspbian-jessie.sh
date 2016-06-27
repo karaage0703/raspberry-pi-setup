@@ -45,9 +45,6 @@ setup_dotfiles(){
 
 START_TIME=`date +%s`
 
-echo "Total Time: ${HH}:${MM}:${SS} (h:m:s)"
-start_time=`date +%s`
-
 # change directory here
 cd `dirname $0`
 
