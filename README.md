@@ -2,6 +2,7 @@
 raspberry pi auto setup script
 
 ## Install Package
+### Raspbian Jessie
 - JAPANESE environment(fonts-vlgothic, ibus-mozc)
 - VNC Server(tightvncserver)
 - Editor(vim,vim-gtk)
@@ -9,33 +10,56 @@ raspberry pi auto setup script
 - Pertition tool(gparted)
 - Virtual Terminal(byobu)
 
+### Raspbian Jessie LITE
+- Editor(vim,vim-gtk)
+- Virtual Terminal(byobu)
+
 ## Setting
+### Raspbian Jessie
 - Custom `.bashrc`
 - Custom `/boot/config.txt`
 - Auto start VNC
 
+### Raspbian Jessie LITE
+- Custom `/boot/config.txt`
+
+
 # Preparation
 - Make SD disk of Raspbian Jessie
-- Network Enable
+- Insert SD disk to Raspberry Pi
+- Network Enable (Ether or WiFi)
+- Raspberry Pi power on
+- Install Git
 
-# Run script
-Execute following commands to install Git (If Git is not installed):
+## Git installation
 ```sh
 $ sudo apt-get update
 $ sudo apt-get -y install git
 ```
 
-Execute following commands:
+# Run script
+
+## Raspbian Jessie setup case
+Execute following command(last command takes about half an hour):
 ```sh
 $ cd
 $ git clone https://github.com/karaage0703/raspberry-pi-setup
 $ cd raspberry-pi-setup
 $ ./setup-raspbian-jessie.sh
 ```
-
 At the end of script, set the password for vnc.
 
-Then please reboot
+## Raspbian Jessie LITE setup case
+Execute following command(last command takes about half an hour):
+```sh
+$ cd
+$ git clone https://github.com/karaage0703/raspberry-pi-setup
+$ cd raspberry-pi-setup
+$ ./setup-raspbian-jessie-lite.sh
+```
+
+## Reboot
+After setup, please reboot by executing following command:
 ```sh
 $ sudo shutdown -r now
 ```
