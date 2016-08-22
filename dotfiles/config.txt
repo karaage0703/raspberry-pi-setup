@@ -63,5 +63,8 @@ gpu_mem=128
 safe_mode_gpio=4
 max_usb_current=1
 
-# for camera module LED
+# disable camera module LED
 disable_camera_led=1
+
+# for serial communication of rpi3
+core_freq=250
