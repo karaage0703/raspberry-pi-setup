@@ -18,6 +18,10 @@ apt_get_install(){
 
 	# install virtual terminal
 	sudo apt-get install -y byobu
+
+	# install camera package
+	sudo apt-get install -y python-picamera
+	sudo apt-get install -y fbi
 }
 
 # setup dotfiles
