@@ -22,6 +22,10 @@ apt_get_install(){
 	# install camera package
 	sudo apt-get install -y python-picamera
 	sudo apt-get install -y fbi
+
+	# install python3
+	sudo apt-get install -y python3
+	sudo apt-get install -y python3-picamera
 }
 
 # setup dotfiles
