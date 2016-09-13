@@ -1,0 +1,11 @@
+[Unit]
+Description=hostapd
+After=network.target auditd.service
+
+[Service]
+EnvironmentFile=-/etc/default/hostapd
+ExecStart=/usr/sbin/hostapd /etc/hostapd/hostapd.conf
+
+[Install]
+WantedBy=multi-user.target
+
