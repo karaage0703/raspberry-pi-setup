@@ -30,6 +30,9 @@ apt_get_install(){
 
 	# install virtual terminal
 	sudo apt-get install -y byobu
+
+	# install screen capture tool
+	sudo apt-get install -y scrot
 }
 
 # setup dotfiles
