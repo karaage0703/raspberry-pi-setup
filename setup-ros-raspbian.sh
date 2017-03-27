@@ -1,5 +1,3 @@
-setup-ros-raspbian.sh
-
 #!/bin/bash
 
 # author: utahkaA
@@ -10,7 +8,7 @@ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu jessie main" > /etc/apt
 wget https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -O - | sudo apt-key add -
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install python-pip python-setuptools python-yaml python-distribute python-docutils python-dateutil python-six
+sudo apt-get install -y python-pip python-setuptools python-yaml python-distribute python-docutils python-dateutil python-six
 sudo pip install rosdep rosinstall_generator wstool rosinstall
 sudo rosdep init
 rosdep update
