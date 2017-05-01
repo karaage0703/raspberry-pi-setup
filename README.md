@@ -64,7 +64,7 @@ Execute following commands:
 $ cd
 $ git clone https://github.com/karaage0703/raspberry-pi-setup
 $ cd raspberry-pi-setup
-$ ./setup-ros-raspbian.sh
+$ ./setup-ros-indigo-raspbian.sh
 ```
 ## Reboot
 After setup, please reboot by executing following command:
