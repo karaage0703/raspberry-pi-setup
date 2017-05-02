@@ -9,7 +9,7 @@ sudo apt-get update
 
 echo "[Installing ROS and ROS Packages]"
 sudo apt-get install -y ros-indigo-ros-base
-sudo apt-get install -y python-rosdep
+sudo apt-get install -y python-rosdep python-catkin-tools
 
 echo "[rosdep init and python-rosinstall]"
 sudo rosdep init
@@ -19,7 +19,8 @@ sudo apt-get install -y python-rosinstall
 echo "[Making the catkin workspace and testing the catkin_make]"
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws
-catkin_make
+catkin init
+catkin build
 
 echo "[Setting the ROS evironment]"
 sh -c "echo \"source ~/catkin_ws/devel/setup.bash\" >> ~/.bashrc"
