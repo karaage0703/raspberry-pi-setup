@@ -1,30 +1,24 @@
 #!/bin/bash
 
+# author: utahkaA
 # reference site:
-# http://cyberworks.cocolog-nifty.com/blog/2016/02/raspberry-pi--4.html2
+# http://qiita.com/utahkaA/items/126f93c3d73c4f5269e2
 
-sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu trusty main" > /etc/apt/sources.list.d/ros-latest.list'
-sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu jessie main" > /etc/apt/sources.list.d/ros-latest.list'
+wget https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -O - | sudo apt-key add -
 sudo apt-get update
-
-echo "[Installing ROS and ROS Packages]"
-sudo apt-get install -y ros-indigo-ros-base
-sudo apt-get install -y python-rosdep
-
-echo "[rosdep init and python-rosinstall]"
+sudo apt-get upgrade
+sudo apt-get install -y python-pip python-setuptools python-yaml python-distribute python-docutils python-dateutil python-six
+sudo pip install rosdep rosinstall_generator wstool rosinstall
 sudo rosdep init
 rosdep update
-sudo apt-get install -y python-rosinstall
-
-echo "[Making the catkin workspace and testing the catkin_make]"
-mkdir -p ~/catkin_ws/src
-cd ~/catkin_ws
-catkin_make
-
-echo "[Setting the ROS evironment]"
-sh -c "echo \"source ~/catkin_ws/devel/setup.bash\" >> ~/.bashrc"
-echo "[ROS setup is done!]"
-
+mkdir ~/ros_catkin_ws
+cd ~/ros_catkin_ws
+rosinstall_generator ros_comm —rosdistro indigo —deps —wet-only —exclude roslisp —tar > indigo-ros_comm-wet.rosinstall
+wstool init src indigo-ros_comm-wet.rosinstall
+rosdep install —from-paths src —ignore-src —rosdistro indigo -y -r —os=debian:jessie
+sudo ./src/catkin/bin/catkin_make_isolated —install -DCMAKE_BUILD_TYPE=Release —install-space /opt/ros/indigo -j2
+source /opt/ros/indigo/setup.bash
+echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
+echo "ROS setup is done"
 exec bash
-
-exit 0
