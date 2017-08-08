@@ -53,6 +53,12 @@ $ ./setup-raspbian-jessie.sh
 ```
 At the end of script, set the password for vnc.
 
+## Shrink Raspbian Jessie
+Execute following commands if you want to shrink raspbian:
+```sh
+$ ./shrink-raspbian-jessie.sh
+```
+
 ## Raspbian Jessie LITE setup case
 Execute following commands(last command takes about half an hour):
 ```sh
