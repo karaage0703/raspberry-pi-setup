@@ -49,14 +49,14 @@ $ cd raspberry-pi-setup
 ## Raspbian Jessie setup case
 Execute following commands(last command takes about half an hour):
 ```sh
-$ ./setup-raspbian-jessie.sh
+$ ./setup-raspbian-stretch_jessie.sh
 ```
 At the end of script, set the password for vnc.
 
 ## Shrink Raspbian Jessie
 Execute following commands if you want to shrink raspbian:
 ```sh
-$ ./shrink-raspbian-jessie.sh
+$ ./shrink-raspbian-stretch_jessie.sh
 ```
 
 ## Raspbian Jessie LITE setup case
