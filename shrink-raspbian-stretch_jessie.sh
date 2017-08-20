@@ -4,10 +4,11 @@
 delete_package(){
 	# delete package
 	sudo apt-get autoremove -y wolfram-engine
+	sudo apt-get autoremove -y oracle-java8-jdk
 	sudo apt-get autoremove -y sonic-pi
 	sudo apt-get autoremove -y libreoffice*
 	# 100MB-----------
-	sudo apt-get autoremove -y scratch nuscratch squeak-plugins-scratch
+	sudo apt-get autoremove -y scratch* nuscratch squeak-plugins-scratch
 	sudo apt-get autoremove -y nuscratch
 	sudo apt-get autoremove -y gnome-user-guide
 	sudo apt-get autoremove -y freepats
