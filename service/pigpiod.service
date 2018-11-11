@@ -1,0 +1,10 @@
+[Unit]
+Description = pigpio daemon
+ 
+[Service]
+ExecStart = /usr/bin/pigpiod
+Restart = always
+Type = forking
+ 
+[Install]
+WantedBy = multi-user.target
