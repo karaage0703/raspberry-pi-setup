@@ -7,6 +7,7 @@ install_tensorflow(){
 	sudo pip3 install -U setuptools
 	sudo pip3 install wrapt --upgrade --ignore-installed
 	sudo pip3 install --default-timeout=1000 tensorflow==1.13.1
+	sudo apt-get install -y python3-h5py
 }
 
 
