@@ -2,6 +2,8 @@
 # Raspberry Pi 4
 # Raspbian Buster with desktop 2020-02-13
 # Reference:
+# https://github.com/irori/np2pi/wiki/NP2-for-Raspberry-Pi
+# http://bauxite.sakura.ne.jp/software/dos/freedos.htm
 
 START_TIME=`date +%s`
 
@@ -39,6 +41,11 @@ make -f makefile.rpi
 cd ~/np2pi/bin
 sudo apt-get install ttf-sazanami-gothic
 ln -s /usr/share/fonts/truetype/sazanami/sazanami-gothic.ttf default.ttf
+
+# Download disk image
+cd ~/np2pi/bin
+wget https://github.com/lpproj/fdkernel/releases/download/test-20200227/fd98_hd_250m_20200227.zip
+unzip fd98_hd_250m_20200227.zip
 
 END_TIME=`date +%s`
 
