@@ -2,36 +2,25 @@
 raspberry pi auto setup script
 
 ## Install Package
-### Raspbian Jessie
+### Raspbian Buster
 - JAPANESE environment(fonts-vlgothic, ibus-mozc)
-- VNC Server(tightvncserver)
 - Editor(vim,vim-gtk)
 - Terminal(gnome-terminal)
-- Pertition tool(gparted)
-- Virtual Terminal(byobu)
-
-### Raspbian Jessie LITE
-- Editor(vim,vim-gtk)
+- Partition tool(gparted)
 - Virtual Terminal(byobu)
 
 ## Setting
-### Raspbian Jessie
+### Raspbian Buster
 - Custom `.bashrc`
-- Custom `/boot/config.txt`
-- Auto start VNC
-
-### Raspbian Jessie LITE
-- Custom `/boot/config.txt`
-
 
 # Preparation
 - Make SD disk of Raspbian Jessie
 - Insert SD disk to Raspberry Pi
 - Network Enable (Ether or WiFi)
 - Raspberry Pi power on
-- Install Git
+- Install Git(Only for old raspbian)
 
-## Git installation
+## Git installation(Only for old raspbian)
 ```sh
 $ sudo apt-get update
 $ sudo apt-get -y install git
@@ -46,23 +35,16 @@ $ cd raspberry-pi-setup
 ```
 
 
-## Raspbian Jessie setup case
-Execute following commands(last command takes about half an hour):
+## Raspbian Buster setup case
+Execute following commands:
 ```sh
-$ ./setup-raspbian-stretch_jessie.sh
+$ ./setup-raspbian-buster.sh
 ```
-At the end of script, set the password for vnc.
 
 ## Shrink Raspbian Jessie
 Execute following commands if you want to shrink raspbian:
 ```sh
 $ ./shrink-raspbian-stretch_jessie.sh
-```
-
-## Raspbian Jessie LITE setup case
-Execute following commands(last command takes about half an hour):
-```sh
-$ ./setup-raspbian-jessie-lite.sh
 ```
 
 ## ROS on Raspbian setup case
