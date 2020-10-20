@@ -2,7 +2,7 @@
 raspberry pi auto setup script
 
 ## Install Package
-### Raspbian Buster
+### Raspberry Pi OS Buster
 - JAPANESE environment(fonts-vlgothic, ibus-mozc)
 - Editor(vim,vim-gtk)
 - Terminal(gnome-terminal)
@@ -10,23 +10,23 @@ raspberry pi auto setup script
 - Virtual Terminal(byobu)
 
 ## Setting
-### Raspbian Buster
+### Raspberry Pi OS Buster
 - Custom `.bashrc`
 
-# Preparation
-- Make SD disk of Raspbian Jessie
+### Preparation
+- Make SD disk of Raspberry Pi OS
 - Insert SD disk to Raspberry Pi
 - Network Enable (Ether or WiFi)
 - Raspberry Pi power on
 - Install Git(Only for old raspbian)
 
-## Git installation(Only for old raspbian)
+### Git installation(Only for old raspbian)
 ```sh
 $ sudo apt-get update
 $ sudo apt-get -y install git
 ```
 
-# Run script
+## Run script
 At first Execute following commands for clone repository:
 ```sh
 $ cd
@@ -35,25 +35,25 @@ $ cd raspberry-pi-setup
 ```
 
 
-## Raspbian Buster setup case
+### Raspbian Buster setup case
 Execute following commands:
 ```sh
 $ ./setup-raspbian-buster.sh
 ```
 
-## Shrink Raspbian Jessie
+### Shrink Raspbian Jessie
 Execute following commands if you want to shrink raspbian:
 ```sh
 $ ./shrink-raspbian-stretch_jessie.sh
 ```
 
-## ROS on Raspbian setup case
+### ROS on Raspberry Pi OS setup case
 Execute following commands:
 ```sh
 $ ./setup-ros-indigo-raspbian.sh
 ```
 
-## ROS on Ubuntu setup case
+### ROS on Ubuntu setup case
 Install Ubuntu 14.04 to raspberry pi before setup.
 
 Execute following commands:
@@ -61,10 +61,8 @@ Execute following commands:
 $ ./setup-ros-indigo-ubuntu.sh
 ```
 
-## Reboot
-After setup, please reboot by executing following command:
-```sh
-$ sudo shutdown -r now
-```
+## License
+This software is released under the MIT License, see LICENSE.
 
-Raspberry Pi setup is done!
+## Authors
+- [karaage0703](https://twitter.com/karaage0703)
