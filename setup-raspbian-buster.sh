@@ -31,11 +31,13 @@ apt_get_install(){
 
 	# install screen capture tool
 	sudo apt install -y scrot
+
+	sudo apt install -y curl
 }
 
 # setup dotfiles
 setup_dotfiles(){
-	sudo cp ./dotfiles/.bashrc ~/.bashrc
+	curl -l https://raw.githubusercontent.com/karaage0703/ubuntu-setup/master/bashrc.patch >> ~/.bashrc
 }
 
 START_TIME=`date +%s`

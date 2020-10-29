@@ -33,11 +33,13 @@ apt_get_install(){
 
 	# install screen capture tool
 	sudo apt-get install -y scrot
+
+	sudo apt-get install -y curl
 }
 
 # setup dotfiles
 setup_dotfiles(){
-	sudo cp ./dotfiles/.bashrc ~/.bashrc
+	curl -l https://raw.githubusercontent.com/karaage0703/ubuntu-setup/master/bashrc.patch >> ~/.bashrc
 	sudo cp ./dotfiles/config.txt /boot/config.txt
 	sudo cp ./dotfiles/lxpolkit.desktop /etc/xdg/autostart/lxpolkit.desktop
 
