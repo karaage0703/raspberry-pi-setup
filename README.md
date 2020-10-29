@@ -10,32 +10,28 @@ raspberry pi auto setup script
 - Virtual Terminal(byobu)
 
 ## Setting
-### Raspberry Pi OS Buster
-- Custom `.bashrc`
-
 ### Preparation
-- Make SD disk of Raspberry Pi OS
+- Installing Raspberry Pi OS to SD Card
 - Insert SD disk to Raspberry Pi
 - Network Enable (Ether or WiFi)
 - Raspberry Pi power on
 - Install Git(Only for old raspbian)
 
-### Git installation(Only for old raspbian)
-```sh
-$ sudo apt-get update
-$ sudo apt-get -y install git
-```
-
 ## Run script
 At first Execute following commands for clone repository:
 ```sh
-$ cd
-$ git clone https://github.com/karaage0703/raspberry-pi-setup
+$ cd && git clone https://github.com/karaage0703/raspberry-pi-setup
 $ cd raspberry-pi-setup
 ```
 
+## Update .bashrc
+Execute following command:
 
-### Raspbian Buster setup case
+```sh
+$ curl -l https://raw.githubusercontent.com/karaage0703/ubuntu-setup/master/bashrc.patch >> ~/.bashrc
+```
+
+### Raspberry Pi OS setup case
 Execute following commands:
 ```sh
 $ ./setup-raspbian-buster.sh
