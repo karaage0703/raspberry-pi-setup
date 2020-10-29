@@ -1,6 +1,5 @@
 #!/bin/bash
-# Raspbian Buster with desktop 2019-09-26
-
+# Raspberry Pi OS with desktop 2020-08-20
 # install tensorflow
 install_tensorflow(){
 	sudo pip3 install -U pip
@@ -23,4 +22,4 @@ SS=`expr ${SS} % 3600`
 MM=`expr ${SS} / 60`
 SS=`expr ${SS} % 60`
 
-echo "Total Time: ${HH}:${MM}:${SS} (h:m:s)"
+echo "Total Time(Setup TensorFlow): ${HH}:${MM}:${SS} (h:m:s)"
