@@ -24,11 +24,18 @@ $ cd && git clone https://github.com/karaage0703/raspberry-pi-setup
 $ cd raspberry-pi-setup
 ```
 
-## Update .bashrc
+### Update .bashrc
 Execute following command:
 
 ```sh
-$ curl -l https://raw.githubusercontent.com/karaage0703/ubuntu-setup/master/bashrc.patch >> ~/.bashrc
+$ curl -s https://raw.githubusercontent.com/karaage0703/ubuntu-setup/master/bashrc.patch >> ~/.bashrc
+```
+
+### Setup AI environment
+Execute following command:
+
+```sh
+$ ./setup-ai.sh
 ```
 
 ### Raspberry Pi OS setup case
@@ -55,6 +62,12 @@ Install Ubuntu 14.04 to raspberry pi before setup.
 Execute following commands:
 ```sh
 $ ./setup-ros-indigo-ubuntu.sh
+```
+
+### Setup PC98 emulator
+
+```sh
+$ curl -s https://raw.githubusercontent.com/karaage0703/raspberry-pi-setup/master/setup-np2pi.sh | /bin/bash
 ```
 
 ## License
