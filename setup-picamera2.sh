@@ -15,6 +15,7 @@ sudo apt install -y meson
 sudo pip3 install opencv
 sudo pip3 install pyyaml ply
 sudo pip3 install pyopengl
+sudo pip3 install piexif
 cd
 git clone --branch picamera2 https://github.com/raspberrypi/libcamera.git
 cd libcamera
